@@ -1,11 +1,11 @@
-# 🖼️ Serverless Image Compression Pipeline (AWS Lambda + Pillow)
+# Serverless Image Compression Pipeline (AWS Lambda + Pillow)
 
 ## 📌 Overview
 This project implements a **serverless image compression pipeline** using AWS Lambda and Pillow.  
 When a new image is uploaded to an **Input S3 Bucket**, the Lambda function automatically compresses the image and stores it in the **Output S3 Bucket**.  
 Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 
-## 🚀 Architecture
+## Architecture
 ![Architecture Diagram](Doc/architecture.png.png)
 
 **Flow:**
@@ -25,10 +25,10 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 
 ## 📂 Project Structure
 
-├── lambda_function.py # Main Lambda function that processes and compresses images
-├── pillow-layer.zip # Custom Lambda layer containing the Pillow library (compiled on EC2 for compatibility)
-├── README.md # Documentation and setup guide for the project
-└── architecture.png.png # Visual diagram of the serverless pipeline architecture
+-├── lambda_function.py # Main Lambda function that processes and compresses images
+-├── pillow-layer.zip # Custom Lambda layer containing the Pillow library (compiled on EC2 for compatibility)
+-├── README.md # Documentation and setup guide for the project
+-└── architecture.png.png # Visual diagram of the serverless pipeline architecture
 
 ## ⚙️ Setup Instructions
 1. **Create resources**:
@@ -52,7 +52,7 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
    - Check DynamoDB for metadata.
    - Check SNS for notification.
 
-## ✅ Example Metadata Stored
+## Example Metadata Stored
 ```json
 {
   "ImageID": "example.jpg",
@@ -63,9 +63,9 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
   "Timestamp": "2025-09-09T20:22:08.885477"
 }
 ```
-## 🧗 Challenges & Lessons Learned
+## Challenges & Lessons Learned
 
-This project wasn’t smooth sailing — here are the major struggles I faced and how I solved them:
+This project wasn’t smooth sailing, here are the major struggles I faced and how I solved them:
 
 ### 1. **Pillow Library Nightmare**
 - **Problem:** Pillow is not natively supported in AWS Lambda’s runtime.  
