@@ -6,7 +6,7 @@ When a new image is uploaded to an **Input S3 Bucket**, the Lambda function auto
 Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 
 ## 🚀 Architecture
-![Architecture Diagram](lambda_pipeline_architecture.png)
+![Architecture Diagram](Doc/architecture.png.png)
 
 **Flow:**
 1. Upload image to **Input S3 Bucket**.
@@ -24,10 +24,11 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 - **Pillow** (Python Imaging Library)
 
 ## 📂 Project Structure
-├── lambda_function.py # Main Lambda function
-├── pillow-layer.zip # Lambda layer for Pillow
-├── README.md # Documentation
-└── architecture.png # Pipeline architecture diagram
+
+├── lambda_function.py # Main Lambda function that processes and compresses images
+├── pillow-layer.zip # Custom Lambda layer containing the Pillow library (compiled on EC2 for compatibility)
+├── README.md # Documentation and setup guide for the project
+└── architecture.png # Visual diagram of the serverless pipeline architecture
 
 ## ⚙️ Setup Instructions
 1. **Create resources**:
@@ -100,11 +101,5 @@ This project wasn’t smooth sailing — here are the major struggles I faced an
 - **Fix:** Optimized Pillow imports and minimized dependencies so Lambda stays lightweight.
 
 ---
-
-## 🎉 Key Takeaways
-- Packaging Python libraries for Lambda isn’t always straightforward — **native dependencies must match Lambda’s OS**.  
-- IAM misconfigurations will waste more time than code bugs.  
-- Debugging becomes easier once you store **metadata + logs** instead of guessing.  
-- Environment parity (EC2 vs Lambda) is a life-saver.  
 
 
