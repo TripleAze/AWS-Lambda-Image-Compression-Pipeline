@@ -24,11 +24,10 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 - **Pillow** (Python Imaging Library)
 
 ## 📂 Project Structure
-
--├── lambda_function.py # Main Lambda function that processes and compresses images
--├── pillow-layer.zip # Custom Lambda layer containing the Pillow library (compiled on EC2 for compatibility)
--├── README.md # Documentation and setup guide for the project
--└── architecture.png.png # Visual diagram of the serverless pipeline architecture
+├── lambda_function.py # Main Lambda function that processes and compresses images
+├── pillow-layer.zip # Custom Lambda layer containing the Pillow library (compiled on EC2 for compatibility)
+├── README.md # Documentation and setup guide for the project
+└── architecture.png.png # Visual diagram of the serverless pipeline architecture
 
 ## ⚙️ Setup Instructions
 1. **Create resources**:
