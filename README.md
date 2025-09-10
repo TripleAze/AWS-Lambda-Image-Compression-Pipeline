@@ -30,7 +30,7 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 
 ├── README.md # Documentation and setup guide for the project
 
-└── architecture.png.png # Visual diagram of the serverless pipeline architecture
+└── Architecturev1.png # Visual diagram of the serverless pipeline architecture
 
 ## ⚙️ Setup Instructions
 1. **Create resources**:
