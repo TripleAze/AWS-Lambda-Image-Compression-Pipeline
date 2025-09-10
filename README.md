@@ -25,12 +25,20 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
 
 ## 📂 Project Structure
 ├── Doc/                     
+
 │   ├── Architecturev1.png   # Serverless pipeline architecture
+
 │   ├── image1.png           # Screenshot: Uploaded file in Input S3
+
 │   ├── image2.png           # Screenshot: Compressed file in Output S3
+
+
 │   ├── image3.png           # Screenshot: Metadata stored in DynamoDB
+
 │   └── image4.png           # Screenshot: Notification received via SNS
+
 ├── lambda_function.py       # Main Lambda function
+
 ├── pillow-layer.zip         # Custom Lambda layer with Pillow (Amazon Linux build)
 
 └── README.md                # Documentation (this file)
