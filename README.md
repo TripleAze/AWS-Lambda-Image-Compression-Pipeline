@@ -66,7 +66,7 @@ Metadata is saved in **DynamoDB**, and a notification is published to **SNS**.
    - Check DynamoDB for metadata.
    - Check SNS for notification.
 
-## Example Metadata Stored
+## Here’s an example record that gets saved to DynamoDB after a successful compression:
 ```json
 {
   "ImageID": "example.jpg",
